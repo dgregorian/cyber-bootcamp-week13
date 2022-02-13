@@ -8,7 +8,7 @@ These files have been tested and used to generate a live ELK deployment on Azure
 
 - [install-elk.yml](\ansible-playbook\install-elk.yml)
 
-- [install-elk.yml](main\cyber-bootcamp-week13\ansible-playbook\install-elk.yml)
+- [install-elk.yml](\cyber-bootcamp-week13\ansible-playbook\install-elk.yml)
 
 - [Other Files](\ansible-playbook\)
 
