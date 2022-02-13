@@ -2,15 +2,11 @@
 
 The files in this repository were used to configure the network depicted below.
 
-- [Network Diagram](images\Azure Diagram - BootCamp.png)
+- [Network Diagram](https://github.com/dgregorian/cyber-bootcamp-week13/blob/main/images/azure_diagram.png)
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the playbook file may be used to install only certain pieces of it, such as Filebeat.
 
-- [install-elk.yml](\ansible-playbook\install-elk.yml)
-
-- [install-elk.yml](\cyber-bootcamp-week13\ansible-playbook\install-elk.yml)
-
-- [Other Files](\ansible-playbook\)
+- [install-elk.yml](https://github.com/dgregorian/cyber-bootcamp-week13/blob/main/ansible_playbook/install_elk.yml)
 
 This document contains the following details:
 - Description of the Topologu
@@ -75,7 +71,7 @@ The playbook implements the following tasks:
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-- [Elk Docker Container](\images\elk-docker-ps-output.png)
+- [Elk Docker Container](https://github.com/dgregorian/cyber-bootcamp-week13/blob/main/images/elk_docker_ps.png)
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines: 10.0.0.5, 10.0.0.6, 10.0.0.7
@@ -94,11 +90,11 @@ SSH into the control node and follow the steps below:
 
 _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
 
-1) cd /etc/ansible/
-2) nano hosts - Update the hosts file with your target servers.
-3) nano ansible.cfg - Update the ansible.cfg file to fine-tune settings (e.g. setting the default user to attempt connection as)
-4) ssh <user>@<webserver-IP> - Ensure connection via key is established with target servers by remotely executing a "ping" command or SSHing into the boxes.
-5) curl https://gist.githubusercontent.com/slape/5cc350109583af6cbe577bbcc0710c93/raw/eca603b72586fbe148c11f9c87bf96a63cb25760/Filebeat >> /etc/ansible/filebeat-config.yml
-6) nano filebeat-config.yml - replace the appropriate instances with your Kibana server's IP address.
-7) curl https://uclax.bootcampcontent.com/UCLA-Coding-Boot-Camp/ucla-la-virt-cyber-pt-10-2021-u-c/-/blob/master/1-Lesson-Plans/13-Elk-Stack-Project/Activities/Stu_Day_2/Solved/config_files/filebeat-playbook.yml >> /etc/ansible/filebeat-playbook.yml
-8) ansible-playbook filebeat-playbook.yml
+1) ```cd /etc/ansible/```
+2) ```nano host``` - Update the hosts file with your target servers.
+3) ```nano ansible.cfg``` - Update the ansible.cfg file to fine-tune settings (e.g. setting the default user to attempt connection as)
+4) ```ssh RedAdmin@<webserver-IP>``` - Ensure connection via key is established with target servers by remotely executing a "ping" command or SSHing into the boxes.
+5) ```curl https://gist.githubusercontent.com/slape/5cc350109583af6cbe577bbcc0710c93/raw/eca603b72586fbe148c11f9c87bf96a63cb25760/Filebeat >> /etc/ansible/filebeat-config.yml```
+6) ```nano filebeat-config.yml``` - replace the appropriate instances with your Kibana server's IP address.
+7) ```curl https://uclax.bootcampcontent.com/UCLA-Coding-Boot-Camp/ucla-la-virt-cyber-pt-10-2021-u-c/-/blob/master/1-Lesson-Plans/13-Elk-Stack-Project/Activities/Stu_Day_2/Solved/config_files/filebeat-playbook.yml >> /etc/ansible/filebeat-playbook.yml```
+8) ```ansible-playbook filebeat-playbook.yml```
